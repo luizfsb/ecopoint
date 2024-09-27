@@ -1,0 +1,29 @@
+:root {
+    --font-principal:"Roboto", sans-serif;
+    --branco: #F5F5F5;
+    --preto: #021526;
+    --azul-escuro: #001F3F;
+    --verde-agua: #98DED9;
+    --verde-claro: #EDFFFA;
+}
+
+* {
+    font-family: var(--font-principal);
+    font-weight: 400;
+    color: var(--preto);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+
+
+
+
+
