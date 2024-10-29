@@ -1,25 +1,29 @@
 :root {
+    /* Fontes */
+
     --font-principal:"Roboto", sans-serif;
+
+    /* Cores */
+
     --branco: #F5F5F5;
     --preto: #021526;
     --azul-escuro: #001F3F;
     --verde-agua: #98DED9;
     --verde-claro: #EDFFFA;
+    --verde-escuro: #039b6d;
+    --verde: #40A578;
+    --cinza: #686D76;
+    --cinza-claro: #DDDDDD;
 }
 
 * {
     font-family: var(--font-principal);
     font-weight: 400;
     color: var(--preto);
+    font-size: 16px;
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
+
 
 
 

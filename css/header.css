@@ -6,29 +6,101 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    padding: 0 1rem;
     background-color: var(--azul-escuro);
 }
 
-.cabecalho_links {
-    margin-left: 35em;
-}
-
-.link_item {
-    margin-right: 2em;
-    text-decoration: none;
-    color: var(--branco);
-}
 
 .cabecalho_logo {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3px;
-    margin-left: 1em;
+    margin-left: 1rem;
+    padding: 1rem 0;
 }
 
-.nome_logo {
+.nome_logo-cabecalho {
     color: var(--branco);
 }
 
+
+.cabecalho_links-lista {
+    display: flex;
+}
+
+.link_item {
+    margin-right: 4rem;
+    text-decoration: none;
+    color: var(--branco);
+    position: relative;
+    padding-bottom: 3px;
+    transition: 0.4s ease-in-out;
+}
+
+.link_item::after {
+    content: " ";
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--verde);
+    position: absolute;
+    transition: 0.4s ease-in-out;
+}
+
+.link_item:hover::after {
+    width: 100%;
+}
+
+.menu-hamburguer {
+    display: none;
+}
+
+/* Responsividade mobile */
+
+@media screen and (max-width: 769px) {
+
+    .menu-hamburguer {
+        display: block;
+        padding-right: 1rem;
+    }
+
+    .menu-hamburguer-preto {
+        background-color: var(--cinza-claro);
+        padding: 1rem 2rem;
+        text-align: center;
+        right: 0;
+        position: absolute;
+        border: 1px solid var(--preto);
+    }
+
+    .cabecalho_container {
+        position: relative;
+    }
+   
+    .cabecalho_links-lista {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: var(--cinza-claro);
+        top: 100%;
+        right: 0;
+        border: 1px solid var(--preto);
+        display: none;
+    }
+
+    .link-lista-item {
+        border-bottom: 1px solid var(--preto);
+        padding: 1.5rem 2rem;
+    }
+
+    .link-lista-item:hover {
+        background-color: var(--verde);
+    }
+
+    .link_item {
+        color: var(--preto);
+        font-size: 1.3rem;
+    }
+}

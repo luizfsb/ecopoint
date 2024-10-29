@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel="shortcut icon" type="imagex/png" href="img/icones/imgEnderecoNavegador.ico">
+
     <!-- Arquivos CSS -->
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
 
     <!-- Arquivos JS -->
 
-    <script type="module" src="js/script.js"></script>
+    <script type="module" src="/js/maps.js"></script>
+    <script type="module" src="/js/scroll.js"></script>
+    <script type="module" src="/js/menu.js"></script>
 
     <!-- Fonts -->
 
@@ -26,24 +32,33 @@
 
     <title>Eco Point</title>
 </head>
+
 <body>
 
     <!-- Cabecalho -->
 
     <header>
-        <nav class="cabecalho_container">
+        <nav class="cabecalho_container" id="container_inicio">
             <div class="cabecalho_logo">
-                <img src="img/icones/logo.svg" alt="imagem da logo" class="icone_logo">
-                <p class="nome_logo">Eco Point</p>
+                <a href="index.html">
+                    <img src="img/icones/logo.svg" alt="imagem da logo" class="icone_logo-cabecalho">
+                </a>
+                <p class="nome_logo-cabecalho">Eco Point</p>
             </div>
-            
-    	    <div class="cabecalho_links">
-                <a href="#" class="link_item">Inicio</a>
-                <a href="#" class="link_item">Sobre</a>
-                <a href="#" class="link_item">Estações</a>
-                <a href="#" class="link_item">login</a>
-                <a href="#" class="link_item">cadastre-se<a>
+            <div class="cabecalho_container-links">
+                <ul class="cabecalho_links-lista" id="menu-links">
+                    <li class="link-lista-item">
+                        <a href="#" id="inicio" class="link_item">Inicio</a>
+                    </li>
+                    <li class="link-lista-item">
+                        <a href="#" id="sobre" class="link_item">Sobre</a>
+                    </li>
+                    <li class="link-lista-item">
+                        <a href="#" id="estacoes" class="link_item">Estações</a>
+                    </li>
+                </ul>
             </div>
+            <img src="img/icones/icone-menu.svg" alt="icone do menu hamburguer" class="menu-hamburguer" id="menu-btn">
         </nav>
     </header>
 
@@ -51,24 +66,24 @@
 
     <main class="container">
         <section class="apresentacao imagem_aprensentacao">
-            <div class="aprentacao_texto">
+            <div class="apresentacao_texto">
                 <h1 class="apresentacao_titulo">Eco point</h1>
-                <p class="aprensetacao_paragrafo">
-                Pontos de locações de bicicletas e patinetes eletricos<br>
-                em toda Belo Horizonte</p>
-                <a class="apresentacao_btn" href="#">Inscreva-se</a>
+                <p class="apresentacao_paragrafo">
+                    Locações de bicicletas e patinetes elétricos<br>
+                    em toda Belo Horizonte</p>
+                <a class="apresentacao_btn" href="#">Cadastra-se</a>
             </div>
             <img src="img/bicicleta-azul.png" alt="imagem da bicicleta" class="apresentacao_imagem">
         </section>
 
         <!-- Sessao sobre nossa empresa -->
 
-        <section class="sobre">
-                <img src="img/patinete.png" alt="" class="sobre_imagem">
-                <div class="sobre_texto">
-                    <h2 class="sobre_titulo">Quem somos nos?</h2>
-                    <p class="sobre_paragrafo">O EcoPoint e uma empresa focada no meio ambiente. Nossa missao é propor uma forma de deslocamento sustentavel e rapida, com preços acessiveis para todos, fornecendo bicicletas e patinetes eletricos.</p>
-                </div>
+        <section class="sobre" id="container_sobre">
+            <img src="img/patinete.png" alt="" class="sobre_imagem">
+            <div class="sobre_texto">
+                <h2 class="sobre_titulo">Quem somos nos?</h2>
+                <p class="sobre_paragrafo">O Eco Point e uma empresa focada no meio ambiente. Nossa missão é propor uma forma de deslocamento sustentável e rápida, com preços acessíveis para todos, fornecendo bicicletas e patinetes elétricos.</p>
+            </div>
         </section>
 
         <!-- Sessao das intrucoes de como utilizar nossa plataforma -->
@@ -77,80 +92,126 @@
             <h3 class="instrucoes_titulo">Como funciona?</h3>
             <div class="instrucoes_cards">
                 <div class="cards_item">
-                    <img src="img/icones/icone-bicicleta.svg" alt="icone da bicicleta" class="intrucoes_icone">
-                    <p class="intrucoes_subtitulo">Locação</p>
-                    <p class="instrucoes_paragrafo">Para utilizar nossos serviços é bem simples, aquio um texto de como o usuario pode usar nosso site, ele pode</p>
+                    <img src="img/icones/icone-contrato.svg" alt="icone do plano" class="intrucoes_icone">
+                    <p class="intrucoes_subtitulo">Planos</p>
+                    <p class="instrucoes_paragrafo">Se cadastrando em nosso site, ficará disponível nossos planos de assinatura mensais, sendo X1, X2 e X3, onde poderá avaliar os transportes e preços de maior interesse, podendo realizar o pagamento por Pix, cartão de crédito ou débito.</p>
                 </div>
                 <div class="cards_item">
-                    <img src="img/icones/icone-medalha.svg" alt="icone do trofeu" class="intrucoes_icone">
-                    <p class="intrucoes_subtitulo">Fidelidade</p>
-                    <p class="instrucoes_paragrafo">Possuimos um programa de fidelidade, que a cada uso voce acumula pontos e pode trocar em descontos em incriveis</p>
+                    <img src="img/icones/icone-bicicleta.svg" alt="icone da bicicleta" class="intrucoes_icone">
+                    <p class="intrucoes_subtitulo">Locação</p>
+                    <p class="instrucoes_paragrafo">Ao realizar o cadastro e assinatura, vá à estação dá eco point mais próxima de você, para realizar a retirada de sua bicicleta ou patinete. Para realizar a devolução, basta ir a qualquer estação dá eco point.</p>
                 </div>
             </div>
 
-            <h3 class="instrucoes_titulo">Estações</h3>
+            <h3 class="instrucoes_titulo" id="container_estacoes">Estações</h3>
 
             <!-- Mapa das estaçoes -->
 
             <div class="instrucoes_mapa-google">
-                <script type="module" src="js/script.js"></script>
-                    <style>
-                        #map {
-                            height: 500px;
-                            width: 800px;
-                        }
-                        .flag-icon {
-                                position: relative;
-                                left: 10px;
-                            }
-                    </style>
-                    <div id="map"></div>
-                    <script>
-                        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-                        ({key: "AIzaSyDkCRgbSfrdFs_O_BrHDb-TQDYOiKLXxTM", v: "weekly"});
-                    </script>
+                <div id="map"></div>
+                <script>
+                    (g => {
+                        var h, a, k, p = "The Google Maps JavaScript API",
+                            c = "google",
+                            l = "importLibrary",
+                            q = "__ib__",
+                            m = document,
+                            b = window;
+                        b = b[c] || (b[c] = {});
+                        var d = b.maps || (b.maps = {}),
+                            r = new Set,
+                            e = new URLSearchParams,
+                            u = () => h || (h = new Promise(async (f, n) => {
+                                await (a = m.createElement("script"));
+                                e.set("libraries", [...r] + "");
+                                for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+                                e.set("callback", c + ".maps." + q);
+                                a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+                                d[q] = f;
+                                a.onerror = () => h = n(Error(p + " could not load."));
+                                a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+                                m.head.append(a)
+                            }));
+                        d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
+                    })
+                    ({
+                        key: "AIzaSyDkCRgbSfrdFs_O_BrHDb-TQDYOiKLXxTM",
+                        v: "weekly"
+                    });
+                </script>
             </div>
         </section>
 
+        <!-- Patrocinios da plataforma -->
+
         <section class="patrocionios">
             <h4 class="patrocinios_titulo">Patrocinadores</h4>
-            <ul class="pratrocionios_lista">
-                <li class="item_lista">
-                    <img src="img/icones/patrocineos/hipermercado.svg" alt="imagem da logo de hipermercado" class="item_logo">
-                    <p class="item_nome">Hipermercados LA</p>
-                </li>
-                <li class="item_lista">
-                    <img src="img/icones/patrocineos/airline.svg" alt="imagem da logo do airline" class="item_logo">
-                    <p class="item_nome">SkyWings Airline</p>
-                </li>
-                <li class="item_lista">
-                <img src="img/icones/patrocineos/bank.svg" alt="imagem da logo do banco" class="item_logo">
-                    <p class="item_nome">VIV Bank</p>
-                </li>
-                <li class="item_lista">
-                    <img src="img/icones/patrocineos/tech.svg" alt="imagem da logo do computador" class="item_logo">
-                    <p class="item_nome">DataEdge</p>
-                </li>
-            </ul>
+            <div class="pratrocionios_lista">
+                <div class="item-container">
+                    <li class="item_lista">
+                        <img src="img/icones/patrocineos/hipermercado.svg" alt="imagem da logo de hipermercado" class="item_logo">
+                        <p class="item_nome">Hipermercados LA</p>
+                    </li>
+                    <li class="item_lista">
+                        <img src="img/icones/patrocineos/airline.svg" alt="imagem da logo do airline" class="item_logo">
+                        <p class="item_nome">SkyWings Airline</p>
+                    </li>
+                </div>
+                <div class="item-container">
+                    <div class="item_lista">
+                        <img src="img/icones/patrocineos/bank.svg" alt="imagem da logo do banco" class="item_logo">
+                        <p class="item_nome">VIV Bank</p>
+                    </div>
+                    <div class="item_lista">
+                        <img src="img/icones/patrocineos/tech.svg" alt="imagem da logo do computador" class="item_logo">
+                        <p class="item_nome">DataEdge</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <hr>                       
+
+    <!-- Rodape -->
+
+    <hr>
     <footer class="rodape">
-        <p class="rodape_endereco">Belo horizonte MG - Brasil</p>
+        <div class="rodape_container-logo">
+            <div class="rodape_logo-rodape">
+                <a href="index.html">
+                    <img src="img/icones/logo.svg" alt="imagem da logo" class="icone_logo-rodape">
+                </a>
+                <p class="nome_logo-rodape">Eco Point</p>
+            </div>
+            <div class="rodape_redes">
+                <img src="img/icones/icone-linkedin.svg" alt="Icone do linkedin" class="rodape_img-redes">
+                <img src="img/icones/icone-instagram.svg" alt="icone do instagram" class="rodape_img-redes">
+                <img src="img/icones/icone-facebook.svg" alt="icone do facebook" class="rodape_img-redes">
+            </div>
+        </div>
+        <div class="rodape_empresa">
+            <p class="rodape_titulo-coluna">Eco Point LTDA</p>
+            <p class="rodape_cnpj">CNPJ: 00.000.000/0000-00</p>
+            <p class="rodape_endereco">Belo horizonte MG - Brasil</p>
+            <p class="rodape_endereco">Rua eco point, 80 - Meio Ambiente</p>
+        </div>
+        <div class="rodape_navegacao">
+            <p class="rodape_titulo-coluna">Navegação</p>
+            <a href="#" id="inicioRodape" class="rodape_link">Inicio</a>
+            <a href="#" id="sobreRodape" class="rodape_link">Sobre</a>
+            <a href="#" id="estacoesRodape" class="rodape_link">Estações</a>
+        </div>
         <div class="rodape_contatos">
+            <p class="rodape_titulo-coluna">Contatos</p>
             <div class="rodape_numero">
-                <img src="img/icones/icone-telefone.svg" alt="imagem do icone do telefone" class="rodape_icone">
+                <img src="img/icones/icone-telefone.svg" alt="imagem do icone do telefone" class="rodape_icone-contatos">
                 <p class="numero">0800 000 0000</p>
             </div>
             <div class="rodape_email">
-                <img src="img/icones/icone-email.svg" alt="imagem do icone do e-mail" class="rodape_icone">
+                <img src="img/icones/icone-email.svg" alt="imagem do icone do e-mail" class="rodape_icone-contatos">
                 <p>ecopoint@ecopoint.com.br</p>
             </div>
         </div>
-        <div class="rodape_logo">
-            <img src="img/icones/logo.svg" alt="imagem da logo" class="icone_logo">
-            <p class="nome_logo-rodape">Eco Point</p>
-        </div>
     </footer>
 </body>
+
 </html>
