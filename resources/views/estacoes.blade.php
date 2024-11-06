@@ -202,9 +202,9 @@
                 <option value="devolver" id="devolver" class="locacao-opcoes-texto">Devolver</option>
             </select>
             <label for="nome-estacao" class="nome-label">Insira o numero da estação Eco Point</label>
-            <input type="number" name="nome-estacao" id="nome-estacao" class="estacao-input" placeholder="00" max="2" min="2" required>
+            <input type="text" name="nome-estacao" id="nome-estacao" class="estacao-input" placeholder="00" maxlength="2" minlength="2" required>
             <label for="codigo" id="nome-codigo" class="codigo-label">Insira o codigo de 5 digitos</label>
-            <input type="number" name="codigo" id="codigo" class="codigo-input" placeholder="00000" max="5" min="5" require>
+            <input type="text" name="codigo" id="codigo" class="codigo-input" placeholder="00000" maxlength="5" minlength="5" required>
             <button id="btn-submit" class="btn-submit">Retirar</button>
         </form>
 
