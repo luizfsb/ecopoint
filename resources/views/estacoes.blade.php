@@ -22,7 +22,6 @@
 
     <script type="module" src="{{ asset('js/maps.js')}}"></script>
     <script type="module" src="{{ asset('js/menu.js') }}"></script>
-    <script type="module" src="{{ asset('js/locacao.js') }}"></script>
 
     <!-- Fontes -->
 

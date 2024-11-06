@@ -92,7 +92,7 @@
 
     .link-lista-item {
         border-bottom: 1px solid var(--preto);
-        padding: 1.5rem 2rem;
+        padding: 1.5rem 0;
     }
 
     .link-lista-item:hover {
@@ -102,5 +102,30 @@
     .link_item {
         color: var(--preto);
         font-size: 1.3rem;
+        padding: 1.5rem 5rem 1.5rem 1.5rem;
+        margin-right: 0;
+    }
+
+    .inicio,
+    .login,
+    .perfil,
+    .sair {
+        padding: 1.5rem 70% 1.5rem 1rem;
+    }
+
+    .estacao {
+        padding: 1.5rem 50% 1.5rem 1rem;
+    }
+
+    .cadastrar {
+        padding: 1.5rem 37% 1.5rem 1rem;
+    }
+
+    .comoFunciona {
+       padding: 1.5rem 4rem 1.5rem 1rem;
+    }
+
+    .link_item:hover::after {
+        width: 0;
     }
 }

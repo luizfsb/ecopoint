@@ -49,22 +49,22 @@
             <div class="cabecalho_container-links">
                 <ul class="cabecalho_links-lista" id="menu-links">
                     <li class="link-lista-item">
-                        <a href="#" id="inicio" class="link_item">Inicio</a>
+                        <a href="#" id="inicio" class="link_item inicio">Inicio</a>
                     </li>
                     <li class="link-lista-item">
-                        <a href="#" id="instrucao" class="link_item">Como funciona?</a>
+                        <a href="#" id="instrucao" class="link_item comoFunciona">Como funciona?</a>
                     </li>
                     <li class="link-lista-item">
-                        <a href="{{ route('estacoes') }}"  class="link_item">Estações</a>
+                        <a href="{{ route('estacoes') }}"  class="link_item estacao">Estações</a>
                     </li>
                     @auth
                     <li class="link-lista-item">
-                        <a href="{{ route('profile.edit') }}" class="link_item">Perfil</a>
+                        <a href="{{ route('profile.edit') }}" class="link_item perfil">Perfil</a>
                     </li>
                     <li class="link-lista-item">
                         <form action="{{ route('logout') }}" method="POST" class="link_sair">
                             @csrf
-                            <a href="{{ route('logout') }}" class="link_item" onclick="event.preventDefault(); this.closest('form').submit();">
+                            <a href="{{ route('logout') }}" class="link_item sair" onclick="event.preventDefault(); this.closest('form').submit();">
                                 Sair
                             </a>
                         </form>
@@ -73,10 +73,10 @@
                     @endauth
                     @guest
                     <li class="link-lista-item">
-                        <a href="{{ route('login') }}" class="link_item">Login</a>
+                        <a href="{{ route('login') }}" class="link_item login" >Login</a>
                     </li>
                     <li class="link-lista-item">
-                        <a href="{{ route('register')}}" class="link_item">Cadastre-se</a>
+                        <a href="{{ route('register')}}" class="link_item cadastrar">Cadastre-se</a>
                     </li>
                     @endguest
                 </ul>

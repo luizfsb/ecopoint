@@ -103,7 +103,7 @@
 }
 
 .instrucoes_titulo {
-    margin-top: 2em;
+    margin-top: 2rem;
     color: var(--branco);
     font-weight: 700;
     font-size: 2rem;
@@ -180,6 +180,7 @@
     flex-direction: column;
     align-items: center;
     padding: 5rem;
+    text-align: center;
 }
 
 .item_nome {
@@ -327,11 +328,13 @@ input:checked {
 
     .instrucoes_cards {
         flex-direction: column;
+        margin-bottom: 5rem;
     }
 
     .cards_item {
         width: 9rem;
         padding: 3rem;
+        height: 17rem;
     }
 
     .intrucoes_icone {
