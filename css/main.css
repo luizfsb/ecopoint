@@ -3,69 +3,52 @@
 .apresentacao {
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color: var(--branco);
-    gap: 7rem;
+    gap: 7em;
 }
 
 .apresentacao_imagem {
     width: 500px;
-    margin-right: 2rem;
-
+    margin-right: 2em;
 }
 
-.apresentacao_texto {
+.aprentacao_texto {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
+    gap: 1em;
 }
 
 .apresentacao_titulo {
     font-weight: 700;
-    font-size: 5rem;
+    font-size: 5em;
+    margin-bottom: 0.2em;
 }
 
-.apresentacao_paragrafo {
+.aprensetacao_paragrafo {
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.3em;
 }
 
 .apresentacao_btn {
-    margin-top: 1rem;
     text-decoration: none;
-    background: linear-gradient(to left, transparent 50%, var(--verde) 50%);
-    background-size: 200% 100%;
-    background-position: left;
-    padding: 1rem 0.5rem;
+    background-color: var(--verde-agua);
+    padding: 1em 0.5em;
     width: 120px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 40px;
     font-weight: 500;
-    transition: 0.4s ease-in-out;
-    border: 3px solid var(--verde-claro);
-    color: var(--branco);
-    box-shadow:
-        -7px -7px 20px 0px #fff9,
-        -4px -4px 5px 0px #fff9,
-        7px 7px 20px 0px #0002,
-        4px 4px 5px 0px #0001;
-}
-
-.apresentacao_btn:hover {
-    background-position: right;
-    border: 3px solid var(--verde);
-    color: var(--verde);
 }
 
 /* Conteudo da sessao sobre */
 
-.sobre {
+.sobre{
     background-color: var(--verde-claro);
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .sobre_texto {
     display: flex;
@@ -73,17 +56,17 @@
     justify-content: center;
     align-items: center;
     width: 50%;
-    gap: 2rem;
+    gap: 2em;
 }
 
 .sobre_titulo {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 .sobre_paragrafo {
     width: 68%;
-    font-size: 1.6rem;
+    font-size: 1.6em;
 }
 
 .sobre_imagem {
@@ -95,83 +78,65 @@
 
 .instrucoes {
     background-color: var(--azul-escuro);
-    display: flex;
+    display:flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
+    gap: 5em;
 }
 
 .instrucoes_titulo {
     margin-top: 2em;
     color: var(--branco);
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 .instrucoes_paragrafo {
     color: var(--preto);
-    font-size: 1.5rem;
-    color: var(--cinza);
+    font-size: 1.5em;
+    color: darkgray;
 }
 
 .instrucoes_cards {
-    display: flex;
+    display:flex;
     justify-content: center;
-    align-items: center;
-    gap: 5rem;
+    align-items:center;
+    gap: 5em;
 }
 
 
 .cards_item {
     background-color: var(--branco);
     color: var(--preto);
-    width: 18rem;
-    height: 21rem;
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
+    margin: 3em;
+    padding: 3em;
     border-radius: 20px;
-    box-shadow: 9px -9px var(--cinza);
+    box-shadow: 9px -9px gray;
 }
 
 .intrucoes_icone {
     width: 60px;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
 }
 
 .intrucoes_subtitulo {
-    font-size: 1.8rem;
+    font-size: 1.8em;
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
 }
 
 /* Google maps */
 
-#map {
-    height: 500px;
-    width: 800px;
-}
-
-.flag-icon {
-    position: relative;
-    left: 10px;
-}
-
 .instrucoes_mapa-google {
-    margin-bottom: 3rem;
+    margin-bottom: 3em;
     border: 4px solid var(--verde-agua);
     border-radius: 5px;
 }
-
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
-  }
 
 
 /* Patrocinios */
@@ -181,313 +146,91 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
-    gap: 3rem;
+    gap: 3em;
 }
 
 .patrocinios_titulo {
-    margin-top: 2rem;
+    margin-top: 2em;
     color: var(--preto);
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 
 .pratrocionios_lista {
-    display: flex;
-}
-
-.item-container {
-    display: flex;
+    display:flex;
 }
 
 .item_lista {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5rem;
+    padding: 5em;
 }
 
 .item_nome {
-    margin-top: 1rem;
+    margin-top: 1em;
     font-weight: 500;
 }
 
-/* Login e Cadastro */
+/* Rodape */
 
-.pagina {
+hr {
+    height: 1px;
+    margin: 0;
+    border: 30px solid var(--branco);
+    padding: 0 5em 0 11em;
+    width: 80%;
+    background-color: var(--azul-escuro);
+}
+
+.rodape {
     background-color: var(--branco);
-    
-}
-
-.container-form {
-    background-color: var(--verde);
-    padding: 3rem;
-    box-shadow:
-        -7px -7px 20px 0px #fff9,
-        -4px -4px 5px 0px #fff9,
-        7px 7px 20px 0px #0002,
-        4px 4px 5px 0px #0001;
-}
-
-input {
-    background-color: var(--branco);
-    width: 22rem;
-}
-
-
-input:checked {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    gap: 3em;
+    font-family: var(--font-principal);
     color: var(--azul-escuro);
 }
 
-.logo {
+.rodape_logo {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3px;
+    margin-left: 1em;
 }
 
-.icone_logo {
-    height: 47px;
-    width: 51px;
+.rodape_contatos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.logo-nome {
+.rodape_numero {
+    display: flex;
+    align-items: center;
+    margin-left: 5em;
+    
+}
+
+.rodape_email {
+    display: flex;
+    align-items: center;
+    margin-left: 8em;
+}
+
+.rodape_icone {
+    width: 15px;
+    margin-right: 1em;
+}
+
+
+.nome_logo-rodape {
     color: var(--preto);
     font-weight: bold;
-    font-size: 1.3rem;
 }
 
-/* Perfil */
-
-
-.container-editar {
-    background-color: var(--verde);
-}
-
-.historico_texto {
-    padding-bottom: 1rem;
-}
-
-.pagamentos_hist {
-    color: var(--preto);
-    padding: 1.3rem 0;
-    border: 1px solid var(--preto);
-    background-color: var(--branco);
-    border-radius: 5px;
-}
-
-.pagamentos_hist-texto {
-    margin-left: 1rem;
-}
-
-
-
-/* Responsividade */
-
-@media screen and (max-width: 769px) {
-
-    /* Conteudo da apresentacao */
-
-    .apresentacao {
-        flex-direction: column;
-        padding: 3rem;
-        gap: 2.5rem;
-    }
-
-    .apresentacao_imagem {
-        width: 300px;
-    }
-
-    .apresentacao_titulo {
-        font-size: 2rem;
-    }
-
-    .apresentacao_paragrafo {
-        font-size: 1rem;
-    }
-
-    /* Conteudo da sessao sobre */
-
-    .sobre {
-        flex-direction: column-reverse;
-        padding-top: 2rem;
-    }
-
-    .sobre_texto {
-        width: 100%;
-    }
-
-    .sobre_titulo {
-        font-weight: 700;
-        font-size: 1.6rem;
-    }
-
-    .sobre_paragrafo {
-        width: 68%;
-        font-size: 1rem;
-    }
-
-    .sobre_imagem {
-        width: 200px;
-    }
-
-
-    /* Intrucoes de como utilizar a plataforma */
-
-    .instrucoes_titulo {
-        margin-top: 2em;
-        font-size: 1.6rem;
-    }
-
-    .instrucoes_paragrafo {
-        color: var(--preto);
-        font-size: 1rem;
-        color: var(--cinza);
-    }
-
-    .instrucoes_cards {
-        flex-direction: column;
-    }
-
-    .cards_item {
-        width: 9rem;
-        padding: 3rem;
-    }
-
-    .intrucoes_icone {
-        width: 40px;
-    }
-
-    .intrucoes_subtitulo {
-        font-size: 1.3rem;
-    }
-
-    /* Maps */
-
-    #map {
-        height: 200px;
-        width: 300px;
-    }
-
-    /* Patrocinadores */
-
-    .patrocionios {
-        gap: 3rem;
-    }
-    
-    .patrocinios_titulo {
-        font-size: 1.3rem;
-    }
-
-    .item-container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .item_lista {
-        padding: 2rem;
-    }
-
-    /* Login e cadastro */
-    
-    .container-form {
-        background-color: var(--verde);
-        border-radius: 10px;
-        width: 22rem;
-    }
-    
-    input {
-        background-color: var(--branco);
-        width: 15rem;
-    }
-
-    /* Perfil */
-
-    .container-editar {
-        background-color: var(--verde);
-        width: 22rem;
-        border-radius: 10px;
-    }
-
-    .container-form-editar {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-    }
-    
-    .historico_texto {
-        padding-bottom: 1rem;
-    }
-    
-    .pagamentos_hist {
-        color: var(--preto);
-        padding: 1.3rem 0;
-        border: 1px solid var(--preto);
-        background-color: var(--branco);
-        border-radius: 5px;
-    }
-    
-    .pagamentos_hist-texto {
-        margin-left: 1rem;
-    }
-    
-}
-
-@media screen and (max-width: 1024px) {
-    /* Conteudo da apresentacao */
-
-    .apresentacao {
-        padding: 3rem;
-        gap: 4rem;
-    }
-
-    .apresentacao_titulo {
-        font-size: 1.9rem;
-    }
-
-    .apresentacao_imagem {
-        width: 280px;
-    }
-
-    /* Intrucoes de como utilizar a plataforma */
-
-    .instrucoes_paragrafo {
-        color: var(--preto);
-        font-size: 1rem;
-        color: var(--cinza);
-    }
-
-    .cards_item {
-        width: 11rem;
-        padding: 3rem;
-    }
-
-    .intrucoes_icone {
-        width: 40px;
-    }
-
-    .intrucoes_subtitulo {
-        font-size: 1.3rem;
-    }
-
-
-    /* Patrocinadores */
-
-    .patrocionios {
-        gap: 2rem;
-        padding-top: 2rem;
-        padding-bottom: 4rem;
-    }
-    
-    .patrocinios_titulo {
-        font-size: 1.3rem;
-    }
-    
-    .item_lista {
-        padding: 2rem;
-    }
-}
