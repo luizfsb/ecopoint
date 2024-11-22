@@ -48,6 +48,9 @@
                     <li class="link-lista-item">
                         <a href="{{ route('index') }}" class="link_item">Inicio</a>
                     </li>
+                    <li class="link-lista-item">
+                        <a href="{{ route('planos') }}"  class="link_item estacao">Planos</a>
+                    </li>
                     @auth
                     <li class="link-lista-item">
                         <a href="{{ route('profile.edit') }}" class="link_item">Perfil</a>
@@ -236,6 +239,7 @@
             <p class="rodape_titulo-coluna">Navegação</p>
             <a href="{{ route('index') }}" class="rodape_link">Inicio</a>
             <a href="{{ route('estacoes') }}" class="rodape_link">Estações</a>
+            <a href="{{ route('planos') }}"  class="rodape_link">Planos</a>
         </div>
         <div class="rodape_contatos">
             <p class="rodape_titulo-coluna">Contatos</p>

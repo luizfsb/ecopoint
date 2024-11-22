@@ -1,0 +1,171 @@
+:root {
+  --font-principal: "Roboto", sans-serif;
+  --branco: #F5F5F5;
+  --preto: #021526;
+  --azul-escuro: #001F3F;
+  --verde-agua: #98DED9;
+  --verde-claro: #EDFFFA;
+}
+
+* {
+  font-family: var(--font-principal);
+  font-weight: 400;
+  color: var(--preto);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--branco); /* Azul escuro */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+/* Estilos das Bandeiras */
+.planos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.plano {
+  width: 280px;
+  background-color: var(--branco); /* Branco */
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 20px 70px 20px;
+  margin-bottom: 80px;
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow:
+        -70px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+}
+
+.plano ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: left;
+  padding-bottom: 40px;
+}
+
+.plano ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  position: relative; /* Para posicionar o "certinho" */
+  padding-left: 25px; /* Espaço para o ícone */
+}
+
+.plano ul li::before {
+  content: "✔"; /* Símbolo de marcação */
+  color: var(--verde); /* Cor do "certinho" */
+  position: absolute;
+  left: 0; /* Posiciona à esquerda */
+  top: 0; /* Alinha ao topo do item */
+  font-size: 18px; /* Tamanho do ícone */
+  font-weight: 700;
+}
+
+.plano h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.valor {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.paragrafo {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.assine_btn {
+  background-color: var(--verde-agua); /* Verde água */
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--preto); /* Preto */
+  padding: 10px 25px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.assine_btn:hover {
+  background-color: var(--azul-escuro); /* Azul escuro ao passar o mouse */
+  color: #EDFFFA;
+}
+
+
+
+/* Estilos Específicos de Cada Plano */
+.bronze {
+  background-color: #b86b4b; /* Um bronze mais forte */
+  background-image: linear-gradient(45deg, #b86b4b 25%, #cd7f32 25%, #cd7f32 50%, #b86b4b 50%, #b86b4b 75%, #cd7f32 75%, #cd7f32); /* Efeito de bandeira */
+  background-size: 20px 20px; /* Tamanho do padrão */
+}
+
+.prata {
+  background-color: #a8a8a8; /* Um prata mais forte */
+  background-image: linear-gradient(45deg, #a8a8a8 25%, #c0c0c0 25%, #c0c0c0 50%, #a8a8a8 50%, #a8a8a8 75%, #c0c0c0 75%, #c0c0c0); /* Efeito de bandeira */
+  background-size: 20px 20px; /* Tamanho do padrão */
+}
+
+.ouro {
+  background-color: #ffcc00; /* Um ouro mais forte */
+  background-image: linear-gradient(45deg, #ffcc00 25%, #ffd700 25%, #ffd700 50%, #ffcc00 50%, #ffcc00 75%, #ffd700 75%, #ffd700); /* Efeito de bandeira */
+  background-size: 20px 20px; /* Tamanho do padrão */
+}
+
+/* Efeito de Movimento nas Bandeiras */
+.plano:hover {
+  transform: scale(1.10);
+}
+
+/* Estilos da Tela de Pagamento */
+.pago {
+  display: none; /* Inicialmente oculto */
+  text-align: left;
+  margin-top: 20px;
+}
+
+.pago h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.pago p {
+  font-size: 16px;
+}
+
+.pago .valor {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.pago .confirmar {
+  background-color: #28a745; /* Verde */
+}
+
+.pago .cancelar {
+  background-color: #dc3545; /* Vermelho */
+}
+
+

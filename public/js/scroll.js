@@ -1,7 +1,7 @@
-const incioScroll = document.querySelector('#inicio');
-const instrucaoScroll = document.querySelector('#instrucao');
-const incioScrollRodape = document.querySelector('#inicioRodape');
-const instrucaoScrollRodape = document.querySelector('#instrucaoRodape');
+const incioScroll = document.getElementById('inicio');
+const instrucaoScroll = document.getElementById('instrucao');
+const incioScrollRodape = document.getElementById('inicioRodape');
+const instrucaoScrollRodape = document.getElementById('instrucaoRodape');
 
 
 //  Funcao para fazer o scoll suave da pagina

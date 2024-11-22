@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +16,8 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/planos.css') }}">
 
     <!-- Arquivos JS -->
      
@@ -30,10 +31,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-
-    <title>Eco Point</title>
+    <title>Eco Point - Planos</title>
 </head>
-
 <body>
 
     <!-- Cabecalho -->
@@ -52,13 +51,7 @@
                         <a href="{{ route('index') }}" class="link_item">Inicio</a>
                     </li>
                     <li class="link-lista-item">
-                        <a href="#" id="instrucao" class="link_item comoFunciona">Como funciona?</a>
-                    </li>
-                    <li class="link-lista-item">
                         <a href="{{ route('estacoes') }}"  class="link_item estacao">Estações</a>
-                    </li>
-                    <li class="link-lista-item">
-                        <a href="{{ route('planos') }}"  class="link_item estacao">Planos</a>
                     </li>
                     @auth
                     <li class="link-lista-item">
@@ -88,81 +81,57 @@
         </nav>
     </header>
 
-    <!-- Conteudo da apresentacao -->
 
     <main class="container">
-        <section class="apresentacao imagem_aprensentacao">
-            <div class="apresentacao_texto">
-                <h1 class="apresentacao_titulo">Eco point</h1>
-                <p class="apresentacao_paragrafo">
-                    Locações de bicicletas e patinetes elétricos<br>
-                    em toda Belo Horizonte</p>
-                <a class="apresentacao_btn" href="{{ route('register') }}">Cadastra-se</a>
+        <section class="planos">
+            <!-- Plano Bronze -->
+            <div class="plano bronze">
+                <h2>Bronze</h2>
+                <p class="valor">R$ 10,00</p>
+                <p class="paragrafo" >Ideal para quem busca uma opção acessível e prática para o dia a dia.</p>
+                <ul>
+                    <li>Acesso a bicicletas tradicionais</li>
+                    <li>Disponibilidade em todas as estações Eco Point</li>
+                    <li>Suporte básico em caso de problemas técnicos</li>
+                    <li>Até 2 horas de uso por dia</li>
+                </ul>
+                <a href="{{ route('bronze') }}" class="assine_btn">Quero Esse</a>
             </div>
-            <img src="{{ asset('img/bicicleta-azul.png')}}" alt="imagem da bicicleta" class="apresentacao_imagem">
-        </section>
 
-        <!-- Sessao sobre nossa empresa -->
-
-        <section class="sobre">
-            <img src="{{ asset('img/patinete.png')}}" alt="" class="sobre_imagem">
-            <div class="sobre_texto">
-                <h2 class="sobre_titulo">Quem somos nos?</h2>
-                <p class="sobre_paragrafo">O Eco Point e uma empresa focada no meio ambiente. Nossa missão é propor uma forma de deslocamento sustentável e rápida, com preços acessíveis para todos, fornecendo bicicletas e patinetes elétricos.</p>
+            <!-- Plano Prata -->
+            <div class="plano prata">
+                <h2>Prata</h2>
+                <p class="valor">R$ 30,00</p>
+                <p class="paragrafo">Para quem deseja um upgrade com mais conforto e opções de mobilidade.</p>
+                <ul>
+                    <li>Bicicletas premium e patins incluídos</li>
+                    <li>Acesso a estações especiais com suporte técnico avançado</li>
+                    <li>Até 4 horas de uso por dia</li>
+                    <li>Descontos em parceiros locais</li>
+                </ul>
+                <a href="{{ route('prata') }}" class="assine_btn">Quero Esse</a>
+                
             </div>
-        </section>
 
-        <!-- Sessao das intrucoes de como utilizar nossa plataforma -->
-
-        <section class="instrucoes"  id="container_instrucao">
-            <h3 class="instrucoes_titulo">Como funciona?</h3>
-            <div class="instrucoes_cards">
-                <div class="cards_item">
-                    <img src="{{ asset('img/icones/icone-contrato.svg') }}" alt="icone do plano" class="intrucoes_icone">
-                    <p class="intrucoes_subtitulo">Planos</p>
-                    <p class="instrucoes_paragrafo">Se cadastrando em nosso site, ficará disponível nossos planos de assinatura mensais, sendo bronze, prata e ouro, onde poderá avaliar os transportes e preços de maior interesse, podendo realizar o pagamento por Pix, cartão de crédito ou débito.</p>
-                </div>
-                <div class="cards_item">
-                    <img src="{{ asset('img/icones/icone-bicicleta.svg') }}" alt="icone da bicicleta" class="intrucoes_icone">
-                    <p class="intrucoes_subtitulo">Locação</p>
-                    <p class="instrucoes_paragrafo">Ao realizar o cadastro e assinatura, vá à estação dá eco point mais próxima de você, para realizar a retirada de sua bicicleta ou patinete. Para realizar a devolução, basta ir a qualquer estação dá eco point.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Patrocinios da plataforma -->
-
-        <section class="patrocionios">
-            <h4 class="patrocinios_titulo">Patrocinadores</h4>
-            <div class="pratrocionios_lista">
-                <div class="item-container">
-                    <li class="item_lista">
-                        <img src="{{ asset('img/icones/patrocineos/hipermercado.svg') }}" alt="imagem da logo de hipermercado" class="item_logo">
-                        <p class="item_nome">Hipermercados LA</p>
-                    </li>
-                    <li class="item_lista">
-                        <img src="{{ asset('img/icones/patrocineos/airline.svg') }}" alt="imagem da logo do airline" class="item_logo">
-                        <p class="item_nome">SkyWings Airline</p>
-                    </li>
-                </div>
-                <div class="item-container">
-                    <div class="item_lista">
-                        <img src="{{ asset('img/icones/patrocineos/bank.svg') }}" alt="imagem da logo do banco" class="item_logo">
-                        <p class="item_nome">VIV Bank</p>
-                    </div>
-                    <div class="item_lista">
-                        <img src="{{ asset('img/icones/patrocineos/tech.svg') }}" alt="imagem da logo do computador" class="item_logo">
-                        <p class="item_nome">DataEdge</p>
-                    </div>
-                </div>
+            <!-- Plano Ouro -->
+            <div class="plano ouro">
+                <h2>Ouro</h2>
+                <p class="valor">R$ 60,00</p>
+                <p class="paragrafo">A escolha perfeita para quem quer mobilidade total e opções exclusivas.</p>
+                <ul>
+                    <li>Acesso a bicicletas elétricas, patinetes e monociclos</li>
+                    <li>Uso ilimitado em todas as estações Eco Point</li>
+                    <li>Suporte completo e substituição de veículos em minutos</li>
+                    <li>Acesso VIP a eventos exclusivos</li>
+                </ul>
+                <a href="{{ route('ouro') }}" class="assine_btn">Quero Esse</a>
             </div>
         </section>
     </main>
 
     <!-- Rodape -->
-
     <hr>
-    <footer class="rodape">
+   <footer class="rodape">
         <div class="rodape_container-logo">
             <div class="rodape_logo-rodape">
                 <a href="{{ route('index') }}">
@@ -185,7 +154,6 @@
         <div class="rodape_navegacao">
             <p class="rodape_titulo-coluna">Navegação</p>
             <a href="#" id="inicioRodape" class="rodape_link">Inicio</a>
-            <a href="#" id="instrucaoRodape" class="rodape_link">Como funciona?</a>
             <a href="{{ route('estacoes') }}" class="rodape_link">Estações</a>
         </div>
         <div class="rodape_contatos">
@@ -201,5 +169,4 @@
         </div>
     </footer>
 </body>
-
 </html>
