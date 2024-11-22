@@ -97,7 +97,7 @@
                 <p class="apresentacao_paragrafo">
                     Locações de bicicletas e patinetes elétricos<br>
                     em toda Belo Horizonte</p>
-                <a class="apresentacao_btn" href="{{ route('register') }}">Cadastra-se</a>
+                <a class="apresentacao_btn" href="{{ route('register') }}">Cadastre-se</a>
             </div>
             <img src="{{ asset('img/bicicleta-azul.png')}}" alt="imagem da bicicleta" class="apresentacao_imagem">
         </section>
