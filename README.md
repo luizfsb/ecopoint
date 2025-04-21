@@ -21,7 +21,38 @@ O site possui as funções de cadastro e login, retirada e devolução das bicic
 
 ## 🖱️ Acessando o projeto
 
-Para o abrir o projeto, basta <a href="https://app-ecopoint-66242e9c0240.herokuapp.com/">acessar o link</a> e utiliza-lo normalmente.
+### Requisitos
+
+* PHP 8.2 ou superior
+* Composer
+* MySQL
+
+### Como rodar o projeto
+
+Duplicar o arquivo ".env.example" e renomear para ".env".<br>
+Alterar no arquivo .env para as credenciais do seu banco de dados<br>
+
+Instalar as dependências do PHP.
+```
+composer install
+```
+
+Gerar a chave no arquivo .env.
+```
+php artisan key:generate
+```
+
+Executar as migration para criar a base de dados e as tabelas.
+```
+php artisan migrate
+```
+
+Iniciar o projeto criado com Laravel.
+```
+php artisan serve
+```
+
+
 
 ## 🤝 Contribuição
 
